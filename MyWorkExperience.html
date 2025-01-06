@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My Work Experience</title>
+	<link rel="stylesheet" type="text/css" href="CSS/webstyle.css">
+</head>
+<body>
+
+	<header class="header">
+	<h1>My Work Experince</h1>
+	<p>Explore my journey and expertise showcased through my work experience!</p>
+	</header>
+
+	<div class="navbar">
+    <a href="MySkills.html">My Skills</a>
+    <a href="MyQualification.html">My Qualification</a>
+    <a href="MyEducation.html">My Education</a>
+    <a href="MyWorkExperience.html">My Work Experience</a>
+    <a href="index.html" class="right">About Me</a>
+  	</div>
+
+  	<section class="section1">
+  		<div class="container">
+  			<h5><b>As a person who wants to grow and learn, working has become a place for me to acquire and gain real-world professional experience. This is because I feel that job experience allows me to grow and learn things that I would not have learnt anywhere else. I cherish the opportunity and will commit to the job task and responsibilities.</b></h5>
+  		</div>
+  	</section>
+
+  	<section class="section2">
+  		<div class="container">
+  		<h2>INTERNSHIP</h2>
+    <div class="container01">
+        <section id="gallery1">
+            <div class="slider">
+                <div class="slides">
+                    <img src="Image/intern1.jpg" alt="Internship">
+                    <img src="Image/intern4.jpg" alt="Internship">
+                    <img src="Image/intern3.jpg" alt="Internship">
+                    <img src="Image/intern2.jpg" alt="Internship">
+                    <img src="Image/intern5.jpg" alt="Internship">
+                    <img src="Image/intern6.jpg" alt="Internship">
+                </div>
+                <div class="navigation">
+                    <button class="prev" data-gallery="1">&#10094;</button>
+                    <button class="next" data-gallery="1">&#10095;</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+      	<div class="container1">
+  		<h4><b>Perbadanan Perpustakaan Awam Kelantan (PPAK)</b></h4>
+  		<p>The two-month internship at Perbadanan Perpustakaan Awam Kelantan represents an exceptional opportunity for me. I am fortunate to be a member of the PPAK family, as I have had the opportunity to participate in significant events, such as the annual 'Hari Iqra dan Pesta Buku Darul Naim.' This experience has broadened my understanding of a genuine working environment. Additionally, I am receiving an opportunity to work across nearly all departments of the PPAK company.</p>
+  		</div>
+
+    <h2>PART-TIME WORK</h2>
+    <div class="container01">
+        <section id="gallery2">
+            <div class="slider">
+                <div class="slides">
+                    <img src="Image/job1.jpg" alt="Part-time job">
+                    <img src="Image/job2.jpg" alt="Part-time job">
+                </div>
+                <div class="navigation">
+                    <button class="prev" data-gallery="2">&#10094;</button>
+                    <button class="next" data-gallery="2">&#10095;</button>
+                </div>
+            </div>
+        </section>
+
+  		<div class="container1">
+  		<p>Becoming a part-time worker has really aided me in getting experience and earning extra money for my pocket money while studying. It's a great experience for me to balance my studies and job, and it's helped me develop more discipline. Aside from that, part-time job has given me a lot of experience in dealing with customers, having conversations with them, and being organised and disciplined while working. Becoming an assistant barista and cashier was a tough and memorable experience for me. Experiencing this in my twenties has taught me a lot about the importance of money and my own hard work.</p>
+  		<ol>
+  			<li>Mimieylovelies Desset&Coffee : Assistant Barista</li>
+  		</ol>
+  			
+  		</div>
+
+<script>
+    document.querySelectorAll('.navigation button').forEach(button => {
+         button.addEventListener('click', () => {
+            const galleryId = button.getAttribute('data-gallery');
+            const gallery = document.querySelector(`#gallery${galleryId} .slides`);
+            const images = gallery.children;
+            const direction = button.classList.contains('next') ? 1 : -1;
+
+            let currentIndex = [...images].findIndex(img =>
+                img.getBoundingClientRect().left === gallery.getBoundingClientRect().left
+                );
+
+                currentIndex = (currentIndex + direction + images.length) % images.length;
+                gallery.style.transform = `translateX(-${currentIndex * 100}%)`;
+            });
+        });
+    </script>       
+
+
+</body>
+</html>
